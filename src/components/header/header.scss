@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    border-bottom: 1px solid darken(#f7f5f5, 10%);
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f5f5;
+
+    &__logo {
+        font-family: 'Murecho', sans-serif;
+        text-decoration: none;
+        color: #0f0f0f;
+        font-weight: 300;
+    }
+
+    &__logo--bold {
+        font-weight: 400;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+
+    &-item:first-of-type {
+        margin-right: 10px;
+    }
+
+    &-icon {
+        font-size: 21px;
+    }
+}
+
