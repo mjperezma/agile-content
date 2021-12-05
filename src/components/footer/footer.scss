@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    border-top: 1px solid darken(#f7f5f5, 10%);
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f5f5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__text {
+        font-family: 'Murecho', sans-serif;
+        color: #0f0f0f;
+        font-weight: 300;
+    }
+}
