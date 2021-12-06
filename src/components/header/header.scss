@@ -16,8 +16,15 @@
     &__logo--bold {
         font-weight: 400;
     }
+    &__search{
+        width: 100px;
+        height: auto;
+    }
 }
 
+.header--heigth{
+    height: 30px;
+}
 .nav__list {
     display: flex;
     align-items: center;
@@ -28,6 +35,11 @@
 
     &-icon {
         font-size: 21px;
+    }
+    &-profile{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
     }
 }
 

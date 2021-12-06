@@ -19,12 +19,22 @@ function App() {
       })
 
       setResults(filterSearch);
+      console.log(filterSearch)
     }
 
   return (
    <>
-    <Header />
-    <Search onChange={onChange} />
+    <Header results={getResults}/>
+    {
+      getResults.length > 0 ? (
+        <>
+          <p>Resultados al filtrar</p>
+          <Search onChange={onChange} results={getResults} searchValue={getSearchValue}/> 
+        </>  
+      ) : (
+        <Search onChange={onChange} /> 
+      )
+    }
     <Footer />
    </>
   );
