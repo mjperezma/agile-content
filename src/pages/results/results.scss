@@ -1,0 +1,22 @@
+.results{
+    font-family: 'Arial', sans-serif;
+    width: 80%;
+    &__container{
+        margin: 25px 10px;
+    }
+    &__url{
+        margin: 10px 0;
+    }
+    &__title{
+        color: #0006ff;
+        font-size: 18px;
+        margin: 8px 0;
+    }
+}
+
+.empty{
+    font-family: 'Arial', sans-serif;
+    &__bold{
+        font-weight: 600;
+    }
+}

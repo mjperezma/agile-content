@@ -3,10 +3,10 @@ import './header.scss';
 import SearchLogo from './logo.svg';
 import Profile from './profile.jpg';
 
-const Header = ({results}) => {
+const Header = ({results, getSearchValue}) => {
     return (
-        <header className={`header ${results.length > 0 ? "header--heigth" : ""}`}> 
-        {results.length > 0  ?  
+        <header className={`header ${results.length > 0 || getSearchValue !== ''  ? "header--heigth" : ""}`}> 
+        {results.length > 0 || getSearchValue !== ''   ?  
             <img src={SearchLogo} alt="Logo-google" className="header__search" />  : 
             <a className="header__logo" href="/" title="Agile Content - Frontend test"><span className="header__logo--bold">Agile Content</span> Frontend Test</a>}
             <nav className="nav">
@@ -15,7 +15,7 @@ const Header = ({results}) => {
                         <CgMenuGridR className="nav__list-icon" />
                     </li>
                     <li className="nav__list-item">
-                        {results.length > 0 ? <img className="nav__list-profile" src={Profile} alt="Profile"  /> : 
+                        {results.length > 0 || getSearchValue !== '' ? <img className="nav__list-profile" src={Profile} alt="Profile"  /> : 
                         <CgProfile className="nav__list-icon" />
                         }
                     </li>
