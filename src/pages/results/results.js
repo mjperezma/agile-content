@@ -33,7 +33,7 @@ const Results = ({results, getSearchValue}) => {
                     <li  className="results__container" key={item.id} onClick={() => handleClick({item})}>
                         <span className="results__url">{item.url}</span>
                         <h3 className="results__title">{item.title}</h3>
-                        <p>{item.description}</p>
+                        <p className="results__description">{item.description}</p>
                     </li>
                     ))}
                 </ul>

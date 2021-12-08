@@ -1,0 +1,14 @@
+.image{
+    margin: 20px 10px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid rgb(187, 179, 179);
+    padding: 10px;
+    &__title{
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    &__url{
+        color: rgb(187, 179, 179);
+        margin: 10px 0;
+    }
+}

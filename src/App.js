@@ -12,7 +12,6 @@ function App() {
  
     const onChange = (e) => {
       e.preventDefault();
-      e.target.focus();
       setGetSearchValue(e.target.value);
       
       const filterSearch = list.filter((item) => {
@@ -20,7 +19,6 @@ function App() {
       })
 
       setResults(filterSearch);
-      console.log(filterSearch)
     }
 
   return (
