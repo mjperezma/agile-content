@@ -21,6 +21,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
+
+        &--position {
+            top: -15px;
+        }
     }
 
     &__container {

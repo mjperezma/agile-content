@@ -1,26 +1,24 @@
 import SearchLogo from './search-logo.svg';
 import {GoSearch, GoPlus} from 'react-icons/go';
 import './search.scss';
-import Results from '../../pages/results';
-const Search = ({onChange, searchValue, results}) => {
+const Search = ({onChange, getSearchValue}) => {
     return (
         <>
             <section className="search">
-                {searchValue ? "" :         
+                {getSearchValue ? "" :         
                 <img className="search__logo" src={SearchLogo} alt="Logo" />
             }
-                <form className="search__form">
+                <form className={`search__form ${getSearchValue && 'search__form--position'}`}>
                     <div className="search__container">
                         <GoSearch className="search__icon search__icon--search" />
-                        <input type="text"  className="search__input" defaultValue={searchValue} onChange={onChange}/>
+                        <input type="text"  className="search__input" defaultValue={getSearchValue} onChange={onChange} />
                         <GoPlus className="search__icon search__icon--delete" />
                     </div>
-                    {searchValue ? "" :  
+                    {getSearchValue ? "" :  
                     <input className="search__button" type="submit" value="Buscar" />
                     }
                 </form>
             </section>
-            <Results results={results} searchValue={searchValue}/>
         </>
     )
 }

@@ -1,10 +1,9 @@
 import {useState} from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import Home from './pages/home';
 import Results from './pages/results';
 import data  from './services/useGetData.js';
-import { Route, Routes, Redir } from 'react-router'
+import Search from './components/search';
 const list = data;
 
 function App() {
@@ -13,6 +12,7 @@ function App() {
  
     const onChange = (e) => {
       e.preventDefault();
+      e.target.focus();
       setGetSearchValue(e.target.value);
       
       const filterSearch = list.filter((item) => {
@@ -25,15 +25,12 @@ function App() {
 
   return (
    <>
-    <Header results={getResults} getSearchValue={getSearchValue}/>
-    <Routes>
-      <Route path="/" element={<Home onChange={onChange} getResults={getResults} getSearchValue={getSearchValue} />} />
+    <Header results={getResults} getSearchValue={getSearchValue} onChange={onChange} />
       {
-        getSearchValue && (
-              <Route path="/results" element={<Results getResults={getResults} getSearchValue={getSearchValue}/>} />
-        )
+        getSearchValue ? (
+              <Results results={getResults} getSearchValue={getSearchValue}/>
+        ) : <Search onChange={onChange} results={getResults} getSearchValue={getSearchValue}/>
       }
-    </Routes>
     <Footer />
    </>
   );
