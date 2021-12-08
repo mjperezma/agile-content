@@ -1,16 +1,23 @@
 .results{
     font-family: 'Arial', sans-serif;
-    width: 80%;
-    &__container{
-        margin: 25px 10px;
+    flex-basis: 60%;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
     }
     &__url{
         margin: 10px 0;
     }
+
     &__title{
         color: #0006ff;
         font-size: 18px;
         margin: 8px 0;
+    }
+
+    &__image {
+        flex-basis: 30%;
     }
 }
 
